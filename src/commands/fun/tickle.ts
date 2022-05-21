@@ -8,7 +8,7 @@ export const command = new Command("tickle", "Tickle your friends.")
 	.addOption("string", o => o.setName("tickle").setDescription("Tickle your friends.").setRequired(true))
 	.setExecutor(async int => {
 		const nekos = new Client();
-    const yeeeee = await nekos.sfw.tickle();
+    const yeeeee = await nekos.tickle();
 		const slapped = int.options.getString("tickle", true);
 		const tcfe = text.commands.feedback.embed;
 		await int.reply({
